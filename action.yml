@@ -1,0 +1,14 @@
+name: 'Alexa ask-cli Action'
+author: 'ssavruk@tunein.com'
+description: 'GHA for ask-cli'
+inputs:
+  directory:
+    description: 'Working directory'
+    default: ""
+    required: false
+  args:
+    description: 'ask-cli arguments'
+    required: true
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
