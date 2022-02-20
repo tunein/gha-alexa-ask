@@ -1,0 +1,14 @@
+name: 'Alexa ask-cli Action'
+description: 'GHA for ask-cli'
+inputs:
+  command:
+    description: 'Command to execute'
+    required: true
+outputs:
+  result:
+    description: 'The result of the command'
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.command }}
