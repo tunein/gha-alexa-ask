@@ -3,11 +3,9 @@ FROM node:lts-alpine3.15
 
 RUN npm install -g ask-cli
 
-WORKDIR /home/node
-
 COPY cli_config.json /cli_config.json
+COPY entrypoint.sh /entrypoint.sh
 
-ADD entrypoint.sh /entrypoint.sh
-RUN chmod 700 /entrypoint.sh
+RUN chmod +x /entrypoint.sh
 
 ENTRYPOINT ["/entrypoint.sh"]
