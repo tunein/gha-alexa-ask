@@ -5,4 +5,4 @@ sed -e "s/ASK_REFRESH_TOKEN/$ASK_REFRESH_TOKEN/g" ~/  /cli_config.json > $HOME/.
 
 cd $INPUT_DIRECTORY
 
-ask $INPUT_ARGS
+SKILL_ID=$INPUT_SKILLID ask $INPUT_ARGS

@@ -9,6 +9,9 @@ inputs:
   args:
     description: 'ask-cli arguments'
     required: true
+  skillId:
+    description: 'Alexa skill ID'
+    required: true
 runs:
   using: 'docker'
   image: 'Dockerfile'
